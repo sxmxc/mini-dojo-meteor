@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
-// Employee component - represents a single employee item
+// Employee component - represents a single employee
 export default class Employee extends Component {
   render() {
     return (
-      <tr>{this.props.employee.name}</tr>
+      <tr>{this.props.employee.name} {this.props.employee.position}</tr>
     );
   }
 }

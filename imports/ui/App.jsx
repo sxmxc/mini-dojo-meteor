@@ -15,29 +15,28 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container table-responsive">
+      <div className="container">
         <header>
           <h2>Employees</h2>
-          <form className="new-employee" onSubmit={this.handleSubmit.bind(this)} >
-          <input
-          type="text"
-          ref="textInput"
-          placeholder="Type to add new employee"
-          />
-          </form>
         </header>
+        <div className="table-responsive">
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>Header</th>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Location</th>
+              <th>Date Employed</th>
+              <th>Active</th>
             </tr>
           </thead>
           <tbody>
 
-            <tr>{this.renderEmployees()}</tr>
+            {this.renderEmployees()}
 
           </tbody>
         </table>
+        </div>
       </div>
 
 
@@ -51,7 +50,9 @@ App.propTypes = {
 };
 
 export default createContainer(() => {
+
+  const employees = Employees.find().fetch();
   return {
-    employees: Employees.find({}).fetch(),
-};
+    employees
+  };
 }, App);
