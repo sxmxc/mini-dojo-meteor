@@ -4,7 +4,7 @@ import React, { Component, PropTypes } from 'react';
 export default class Employee extends Component {
   render() {
     return (
-      <tr>{this.props.employee.name} {this.props.employee.position}</tr>
+      <tr><td>{this.props.employee.name}</td><td>{this.props.employee.position}</td><td>{this.props.employee.location}</td><td>{this.props.employee.dateHired}</td><td>{this.props.employee.isActive}</td></tr>
     );
   }
 }

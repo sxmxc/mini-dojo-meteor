@@ -5,8 +5,7 @@ import { Employees } from '../api/employees.js';
 
 import Employee from './Employee.jsx';
 
-// App component - represents the whole app
-class App extends Component {
+class listEmployees extends Component {
   renderEmployees() {
     return this.props.employees.map((employee) => (
       <Employee key={employee._id} employee={employee} />
@@ -31,10 +30,8 @@ class App extends Component {
             </tr>
           </thead>
           <tbody>
-
             {this.renderEmployees()}
-
-          </tbody>
+            </tbody>
         </table>
         </div>
       </div>
@@ -45,7 +42,7 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+listEmployees.propTypes = {
   employees: PropTypes.array.isRequired,
 };
 
@@ -55,4 +52,4 @@ export default createContainer(() => {
   return {
     employees
   };
-}, App);
+}, listEmployees);
