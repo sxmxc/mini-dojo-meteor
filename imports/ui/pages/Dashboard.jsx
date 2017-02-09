@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Content from '../components/Content.jsx'
-import Navigation from '../components/Navigation.jsx'
+import SideNav from '../components/SideNav.jsx'
 
 //Dashboard
 export default class Dashboard extends Component {
@@ -9,7 +9,7 @@ export default class Dashboard extends Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <Navigation />
+                    <SideNav />
 
                     <main className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
                         <h1>Dashboard</h1>
