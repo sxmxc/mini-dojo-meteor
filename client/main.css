@@ -72,3 +72,21 @@ h1 {
 .placeholders .card {
   margin: .75rem;
 }
+
+.btnList-employee {
+  margin-left: auto;
+margin-right: auto;
+display: inline-block;
+}
+
+.btnList-employee ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.btnList-employee li {
+  display: inline-block !important;
+  margin: .5em;
+}

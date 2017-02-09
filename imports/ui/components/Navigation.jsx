@@ -3,13 +3,16 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 
 
+
+
 export default class Navigation extends Component {
   render() {
+
     return (
       <nav className="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
         <ul className="nav nav-pills flex-column">
           <li className="nav-item">
-            <Link to="/dashboard/overview" className="nav-link active">Overview</Link>
+            <Link to="/dashboard/overview" activeClassName="active" className="nav-link">Overview</Link>
             <span className="sr-only">(current)</span>
           </li>
           <li className="nav-item">
@@ -40,7 +43,7 @@ export default class Navigation extends Component {
 
         <ul className="nav nav-pills flex-column">
           <li className="nav-item">
-            <Link to="/dashboard/employees" className="nav-link">Employees</Link>
+            <Link to="/dashboard/employees" activeClassName="active" className="nav-link">Employees</Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Text-A-Nerd</a>

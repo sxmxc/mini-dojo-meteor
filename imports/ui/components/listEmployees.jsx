@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 
-import { Employees } from '../api/employees.js';
+import { Employees } from '../../api/employees.js';
 
 import Employee from './Employee.jsx';
 
@@ -14,10 +14,7 @@ class listEmployees extends Component {
 
   render() {
     return (
-      <div className="container">
-        <header>
-          <h2>Employees</h2>
-        </header>
+
         <div className="table-responsive">
         <table className="table table-striped">
           <thead>
@@ -34,7 +31,6 @@ class listEmployees extends Component {
             </tbody>
         </table>
         </div>
-      </div>
 
 
 

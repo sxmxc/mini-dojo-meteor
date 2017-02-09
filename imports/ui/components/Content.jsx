@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Overview from './Overview.jsx';
+import Overview from '../pages/Overview.jsx';
 
 //Dashboard Overview
 export default class Content extends Component {

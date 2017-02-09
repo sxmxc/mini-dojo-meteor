@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
-import Content from './Content.jsx'
-import Navigation from './Navigation.jsx'
+import Content from '../components/Content.jsx'
+import Navigation from '../components/Navigation.jsx'
 
-//Dashboard Overview
+//Dashboard
 export default class Dashboard extends Component {
     render() {
         return (
