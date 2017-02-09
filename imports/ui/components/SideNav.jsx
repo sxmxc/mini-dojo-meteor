@@ -5,7 +5,7 @@ import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
 
 
 
-export default class Navigation extends Component {
+export default class SideNav extends Component {
   render() {
 
     return (
