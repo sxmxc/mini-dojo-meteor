@@ -9,6 +9,7 @@ import Employees from "../../ui/pages/Employees.jsx";
 import Overview from "../../ui/pages/Overview.jsx";
 import Settings from "../../ui/pages/Settings.jsx";
 import Welcome from "../../ui/pages/Welcome.jsx";
+import Login from "../../ui/pages/Login.jsx";
 import listEmployees from "../../ui/components/listEmployees.jsx";
 import OnBoard from "../../ui/components/OnBoard.jsx";
 import OffBoard from "../../ui/components/OffBoard.jsx";
@@ -18,6 +19,7 @@ export const renderRoutes = () => (
    <Route path="/" component={Layout}>
    <IndexRoute component={Default}/>
    <Route path="/settings" component={Settings} />
+   <Route path="/login" component={Login} />
 
       <Route path="/dashboard" component={Dashboard}>
         <IndexRoute component={Welcome}/>
@@ -27,6 +29,7 @@ export const renderRoutes = () => (
           <Route path="/dashboard/employees/onboard" component={OnBoard}/>
           <Route path="/dashboard/employees/offboard" component={OffBoard}/>
         </Route>
+
 
       </Route>
 

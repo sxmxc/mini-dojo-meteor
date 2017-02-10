@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { browserHistory } from 'react-router';
+import { createContainer } from 'meteor/react-meteor-data';
 
 
 
 
 import TopNav from "../components/TopNav.jsx";
-import Dashboard from "./Dashboard.jsx";
 
 
 
 
 export default class Layout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = this.getMeteorData();
+  }
+  getMeteorData() {
+    const user = Meteor.user();
+    return {
+      isAuthenticated: Meteor.userId() !== null,
+      currentUser: user,
+    }
+  }
+
   render() {
     return (
     <div>
-      <TopNav />
+      <TopNav isAuthenticated={this.state.isAuthenticated}/>
       {this.props.children}
     </div>
-
-
-
-
-
-
     );
   }
 }

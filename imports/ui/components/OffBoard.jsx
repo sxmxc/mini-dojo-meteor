@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 
-
-//Dashboard Overview
 export default class OffBoard extends Component {
   constuctor() {
 
