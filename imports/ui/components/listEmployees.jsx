@@ -24,6 +24,7 @@ class listEmployees extends Component {
               <th>Location</th>
               <th>Date Employed</th>
               <th>Active</th>
+              <th>Edit</th>
             </tr>
           </thead>
           <tbody>

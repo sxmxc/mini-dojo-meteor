@@ -1,10 +1,21 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 // Employee component - represents a single employee
 export default class Employee extends Component {
   render() {
     return (
-      <tr><td>{this.props.employee.name}</td><td>{this.props.employee.position}</td><td>{this.props.employee.location}</td><td>{this.props.employee.dateHired}</td><td>{this.props.employee.isActive}</td></tr>
+      <tr className="text-left">
+        <td>{this.props.employee.name}</td>
+        <td>{this.props.employee.position}</td>
+        <td>{this.props.employee.location}</td>
+        <td>{this.props.employee.dateHired.toString()}</td>
+        <td>{this.props.employee.isActive}</td>
+        <td>
+          <Link to="/dashboard/employee/:employeId/edit"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></Link>
+        </td>
+
+      </tr>
     );
   }
 }
