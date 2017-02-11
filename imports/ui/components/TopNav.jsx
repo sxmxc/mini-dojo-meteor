@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-//Dashboard Overview
+import PublicNav from './PublicNav.jsx';
+import PrivateNav from './PrivateNav.jsx';
+
+
 export default class TopNav extends Component {
     constructor(props) {
         super(props);
 
     }
     render() {
+      var nav;
+      if(!this.props.isAuthenticated) {
+        this.nav = <PublicNav />;
+      } else {
+        this.nav = <PrivateNav />;
+      }
         return (
             <div className="container">
                 <nav className="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
@@ -16,24 +25,8 @@ export default class TopNav extends Component {
                     </button>
                     <Link to="/dashboard" className="navbar-brand">TBDsoft v1.0</Link>
 
-                    <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item">
-                                <Link to='/dashboard' activeClassName="active" className="nav-link">Dashboard
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to='/settings' activeClassName="active" className="nav-link">Settings
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Profile</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Help</a>
-                            </li>
-                        </ul>
-                    </div>
+                    {this.nav}
+
                 </nav>
             </div>
         );

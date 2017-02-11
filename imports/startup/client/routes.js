@@ -13,6 +13,8 @@ import Login from "../../ui/pages/Login.jsx";
 import listEmployees from "../../ui/components/listEmployees.jsx";
 import OnBoard from "../../ui/components/OnBoard.jsx";
 import OffBoard from "../../ui/components/OffBoard.jsx";
+import TimeClock from "../../ui/components/TimeClock.jsx";
+import ServiceOrders from "../../ui/components/ServiceOrders.jsx";
 
 export const renderRoutes = () => (
   <Router history={browserHistory}>
@@ -24,13 +26,13 @@ export const renderRoutes = () => (
       <Route path="/dashboard" component={Dashboard}>
         <IndexRoute component={Welcome}/>
         <Route path="/dashboard/overview" component={Overview} />
+        <Route path="/dashboard/serviceorders" component={ServiceOrders} />
+        <Route path="/dashboard/timeclock" component={TimeClock} />
         <Route path="/dashboard/employees" component={Employees}>
           <Route path="/dashboard/employees/all" component={listEmployees}/>
           <Route path="/dashboard/employees/onboard" component={OnBoard}/>
           <Route path="/dashboard/employees/offboard" component={OffBoard}/>
         </Route>
-
-
       </Route>
 
    </Route>

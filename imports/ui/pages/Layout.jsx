@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { createContainer } from 'meteor/react-meteor-data';
 
-
-
-
 import TopNav from "../components/TopNav.jsx";
-
-
-
 
 export default class Layout extends Component {
   constructor(props) {

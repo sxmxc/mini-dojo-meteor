@@ -19,10 +19,10 @@ export default class SideNav extends Component {
             <a className="nav-link" href="#">Check-In/Check-Out</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Service Orders</a>
+            <Link to="/dashboard/serviceorders" className="nav-link">Service Orders</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">TimeClock</a>
+            <Link to="/dashboard/timeclock" className="nav-link">TimeClock</Link>
           </li>
         </ul>
 
