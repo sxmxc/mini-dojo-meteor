@@ -5,11 +5,11 @@ import { Link } from 'react-router';
 export default class Employee extends Component {
   render() {
     return (
-      <tr className="text-left">
-        <td>{this.props.employee.name}</td>
+      <tr className="">
+        <td>{this.props.employee.username}</td>
         <td>{this.props.employee.position}</td>
         <td>{this.props.employee.location}</td>
-        <td>{this.props.employee.dateHired.toString()}</td>
+        <td>{this.props.employee.dateHired}</td>
         <td>{this.props.employee.isActive}</td>
         <td>
           <Link to="/dashboard/employee/:employeId/edit"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></Link>

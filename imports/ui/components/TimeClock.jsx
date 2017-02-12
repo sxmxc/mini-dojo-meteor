@@ -19,7 +19,7 @@ export default class TimeClock extends Component {
     });
   }
   componentWillUnmount() {
-    clearInterval(this.timerId);
+    clearInterval(this.timerID);
   }
 
   render() {

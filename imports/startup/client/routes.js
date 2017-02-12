@@ -28,7 +28,8 @@ export const renderRoutes = () => (
         <Route path="/dashboard/overview" component={Overview} />
         <Route path="/dashboard/serviceorders" component={ServiceOrders} />
         <Route path="/dashboard/timeclock" component={TimeClock} />
-        <Route path="/dashboard/employees" component={Employees}>
+        <Route path="/dashboard/employees" component={listEmployees}>
+          <IndexRoute component={Employees} />
           <Route path="/dashboard/employees/all" component={listEmployees}/>
           <Route path="/dashboard/employees/onboard" component={OnBoard}/>
           <Route path="/dashboard/employees/offboard" component={OffBoard}/>
